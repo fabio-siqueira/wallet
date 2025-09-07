@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: wallet
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    driverClassName: org.postgresql.Driver
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      max-lifetime: 600000
+      connection-timeout: 20000
+      pool-name: HikariPool
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+springdoc:
+  api-docs:
+    enabled: ${API_DOCS_ENABLED:true}
+  paths-to-exclude: /error
+  swagger-ui:
+    path: /swagger-ui

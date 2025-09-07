@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: wallet
+  jackson:
+    default-property-inclusion: non_null
+  datasource:
+    url: jdbc:postgresql://localhost:5432/walletdb
+    username: wallet
+    password: wallet123
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+springdoc:
+  api-docs:
+    enabled: ${API_DOCS_ENABLED:true}
+  paths-to-exclude: /error
+  swagger-ui:
+    path: /swagger-ui

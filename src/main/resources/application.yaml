@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: wallet
+  jackson:
+    default-property-inclusion: non_null
+
+springdoc:
+  api-docs:
+    enabled: ${API_DOCS_ENABLED:true}
+  paths-to-exclude: /error
+  swagger-ui:
+    path: /swagger-ui
